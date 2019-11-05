@@ -1,4 +1,4 @@
-%div.flash-box
+.flash-box
 .wrapper
   .chat-side
     .side-header
@@ -11,12 +11,12 @@
       %link_to.side-header_box_menu_edit-user
         %a.side-ho{ href: '/users/1692/edit' }
           %i.fa.fa-cog
-    %div.groups
+    .groups
       %a.side-hoge{ href: '/groups/3791/messages' }
-        %div.group
+        .group
           %p.group_group-name
           %p.group_latest-message
-  %div.chat-main
+  .chat-main
     .main-header
       .main-header_left-box
         %h2.main-header_left-box_current-group{id: "data-group_id_#{3791}"}
@@ -25,23 +25,23 @@
           Menber:
           %link_to.main-header_left-box_member-list_menber
       %a.hoge{ href: '/groups/3791/edit' } 
-        %div.main-heder_edit-btn
+        .main-heder_edit-btn
           Edit
-    %div.messages
+    .messages
       .message{id: "data-message_id_#{9386}"}
         .message_upper-info
           %p.message_upper-info_talker
           %p.message_upper-info_date
         %p.message_text
-    %div.form
+    .form
       %fom{class: "new_message", id: "new_message", 
       enctype: "multipart/form-data", action: "/groups/3791/messages",accept_charset: "UTF-8", method: "post"}
 
-        %div.input-box
+        .input-box
           %input{placeholder: "type a message", class: "input-box_text", type: "text"}
           %label.input-box_image
             %i.fa_faimage
-        %div.submit-btn Send
+        .submit-btn Send
 
 
 
