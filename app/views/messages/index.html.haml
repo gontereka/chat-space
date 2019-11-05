@@ -1,0 +1,46 @@
+.flash-box
+.wrapper
+  .chat-side
+    .side-header
+      .side-header_box
+        %p.side-header_box_user-name
+          %ul.side-header_box_menu
+      %li.side-header_box_menu_new-group
+        = link_to '/groups/new' do
+          %i.fa.fa-edit
+      %li.side-header_box_menu_edit-user
+        = link_to "/users/1692/edit" do
+          %i.fa.fa-cog
+    .groups
+      = link_to '/groups/3791/messages' do
+        .group
+          %p.group_group-name
+          %p.group_latest-message
+  .chat-main
+    .main-header
+      .main-header_left-box
+        %h2.main-header_left-box_current-group{id: "data-group_id_#{3791}"}
+          00
+        %ul.main-header_left-box_member-list
+          Menber:
+          %li.main-header_left-box_member-list_menber
+      = link_to '/groups/3791/edit' do 
+        .main-heder_edit-btn
+          Edit
+    .messages
+      .message{id: "data-message_id_#{9386}"}
+        .message_upper-info
+          %p.message_upper-info_talker
+          %p.message_upper-info_date
+        %p.message_text
+    .form
+      %fom{class: "new_message", id: "new_message", 
+      enctype: "multipart/form-data", action: "/groups/3791/messages",accept_charset: "UTF-8", method: "post"}
+
+        .input-box
+          %input{placeholder: "type a message", class: "input-box_text", type: "text"}
+          %label.input-box_image
+            %i.fa_faimage
+        .submit-btn Send
+
+
