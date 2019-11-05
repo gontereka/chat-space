@@ -5,14 +5,14 @@
       .side-header_box
         %p.side-header_box_user-name
           %ul.side-header_box_menu
-      %link_to.side-header_box_menu_new-group
-        %a.side-hoge{ href: '/groups/new' }
+      %li.side-header_box_menu_new-group
+        = link_to '/groups/new' do
           %i.fa.fa-edit
-      %link_to.side-header_box_menu_edit-user
-        %a.side-ho{ href: '/users/1692/edit' }
+      %li.side-header_box_menu_edit-user
+        = link_to "/users/1692/edit" do
           %i.fa.fa-cog
     .groups
-      %a.side-hoge{ href: '/groups/3791/messages' }
+      = link_to '/groups/3791/messages' do
         .group
           %p.group_group-name
           %p.group_latest-message
@@ -23,8 +23,8 @@
           00
         %ul.main-header_left-box_member-list
           Menber:
-          %link_to.main-header_left-box_member-list_menber
-      %a.hoge{ href: '/groups/3791/edit' } 
+          %li.main-header_left-box_member-list_menber
+      = link_to '/groups/3791/edit' do 
         .main-heder_edit-btn
           Edit
     .messages
@@ -42,6 +42,5 @@
           %label.input-box_image
             %i.fa_faimage
         .submit-btn Send
-
 
 
