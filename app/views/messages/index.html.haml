@@ -1,37 +1,54 @@
 .flash-box
 .wrapper
-  .chat-side
-    = render "shared/side_bar"  
-    -# .groups
-    -#   = link_to '/groups/3791/messages' do
-    -#     .group
-    -#       %p.group_group-name
-    -#       %p.group_latest-message
+  = render "shared/side_bar"
   .chat-main
     .main-header
       .main-header_left-box
-        %h2.main-header_left-box_current-group{id: "data-group_id_#{3791}"}
-          00
+        %h2.main-header_left-box_current-group
+          = @group.name
         %ul.main-header_left-box_member-list
           Menber:
+          - if user_signed_in?
+            = current_user.name 
           %li.main-header_left-box_member-list_menber 
-      -# = link_to edit_group_path(@group) do 
+      = link_to  edit_group_path(@group) do
         .main-heder_edit-btn
           Edit
-    .messages
-      .message{id: "data-message_id_#{9386}"}
-        .message_upper-info
-          %p.message_upper-info_talker
-          %p.message_upper-info_date
-        %p.message_text
-    .form
-      %fom{class: "new_message", id: "new_message", 
-      enctype: "multipart/form-data", action: "/groups/3791/messages",accept_charset: "UTF-8", method: "post"}
+    = render @messages
+  -#   .form
+  -# = form_for @group do |f|
+  -#   - if @group.errors.any?
+  -#     .chat-group-form__errors
+  -#       %h2= "#{group.errors.full_messages.count}件のエラーが発生しました。"
+  -#       %ul
+  -#         - group.errors.full_messages.each do |message|
+  -#           %li= message
+  -#   .chat-group-form__field
+  -#     .chat-group-form__field--left
+  -#       = f.label :name, class: 'chat-group-form__label'
+  -#       .chat-group-form__field--right
+  -#       = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'
+  -#       .chat-group-form__field.clearfix
+  -#         / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
+  -#       .chat-group-form__field.clearfix
+  -#         .chat-group-form__field--left
+  -#           %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
+  -#           .chat-group-form__field--right
+  -#           / グループ作成機能の追加時はここにcollection_check_boxesの記述を入れてください
+  -#           = f.collection_check_boxes :user_ids, User.all, :id, :name
+  -#           / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
+  -#       .chat-group-form__field.clearfix
+  -#         .chat-group-form__field--left
+  -#         .chat-group-form__field--right
+  -#           = f.submit class: 'chat-group-form__action-btn'
+    
+    
 
-        .input-box
-          %input{placeholder: "type a message", class: "input-box_text", type: "text"}
-          %label.input-box_image
-            %i.fa_faimage
-        .submit-btn Send
-
-
+    -# .form
+    -#   .fom{class: "new_message", id: "new_message", 
+    -#   enctype: "multipart/form-data", action: "/groups/3791/messages",accept_charset: "UTF-8", method: "post"}
+    -#     .input-box
+    -#       %input{placeholder: "type a message", class: "input-box_text", type: "text"}
+    -#       %label.input-box_image
+    -#         %i.fa_faimage
+    -#     .submit-btn Send

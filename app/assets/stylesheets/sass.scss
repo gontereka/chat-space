@@ -78,13 +78,7 @@ p {
             margin: 0.3rem;
             list-style: none;
           }
-              // .fa.fa-edit {
-              //   display: inline-block;
-              //   font: normal normal normal 14px/1 FontAwesome;
-              //   font-size: inherit;
-              //   text-rendering: auto;
-              //   -webkit-font-smoothing: antialiased;
-              // }
+              
            .side-header_box_menu_edit-user {
              margin-left: 0.3rem;
              list-style: none;
@@ -199,20 +193,20 @@ p {
             color: #434a54;
             border-style: none;
           }
-        .input-box_image {
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-        }
-          .fa_fa-image {
-            display: inline-block;
-            font: normal normal normal 14px/1;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased; 
-          }
+              .input-box_image {
+                font-size: 1.3rem;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+              }
+                  .fa_fa-image {
+                    display: inline-block;
+                    font: normal normal normal 14px/1;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased; 
+                  }
           .submit-btn {
             width: 100px;
             height: 50px;
