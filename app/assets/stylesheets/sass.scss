@@ -29,12 +29,20 @@ p {
     font-weight: inherit;
   }
 
+  .chat-side a {
+    color: white;
+  }
+
 .flash-box {
   color: white;
   font-size: 1rem;
   font-weight: lighter;
   text-align: center;
   width: 100vw;
+}
+
+.icon {
+  color: white;
 }
 
 .wrapper {
@@ -70,37 +78,30 @@ p {
             margin: 0.3rem;
             list-style: none;
           }
-            .side-hoge {
-              color: white;
-            }
-              .fa.fa-edit {
-                display: inline-block;
-                font: normal normal normal 14px/1 FontAwesome;
-                font-size: inherit;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-              }
+              
            .side-header_box_menu_edit-user {
              margin-left: 0.3rem;
              list-style: none;
            }
                 
-              .groups {
-          height: calc(100vh - 100px);
-          background-color: #2f3e51;
-          padding: 20px 20px 0;
-          overflow: scroll;
-          }
-              .group {
-                margin: 40px;
+      .groups {
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+      .group {
+            margin: 40px;
+            .group__name {
+              font-size: 15px;
+              margin-bottom: 5px;
+            }
+              .group__message {
+                font-size: 11px;
               }
-                .group_group-name {
-                  font-size: 15px;
-                  margin-bottom: 5px;
-                }
-                  .group_latest-message {
-                    font-size: 11px;
-                  }
+          }
+            
+          }
+              
   .chat-main {
   width: calc(100vw - 300px);
   float: left;
@@ -192,20 +193,20 @@ p {
             color: #434a54;
             border-style: none;
           }
-        .input-box_image {
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-        }
-          .fa_fa-image {
-            display: inline-block;
-            font: normal normal normal 14px/1;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased; 
-          }
+              .input-box_image {
+                font-size: 1.3rem;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+              }
+                  .fa_fa-image {
+                    display: inline-block;
+                    font: normal normal normal 14px/1;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased; 
+                  }
           .submit-btn {
             width: 100px;
             height: 50px;
